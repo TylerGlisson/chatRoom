@@ -50,7 +50,29 @@
       <div class="update-mssg"></div>
     </form>
   </div>
-  
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    // api key goes here
+    authDomain: "weathersite-250f5.firebaseapp.com",
+    databaseURL: "https://weathersite-250f5.firebaseio.com",
+    projectId: "weathersite-250f5",
+    storageBucket: "weathersite-250f5.appspot.com",
+    messagingSenderId: "658667733992",
+    appId: "1:658667733992:web:bb823ade044e0e85"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script> 
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>
