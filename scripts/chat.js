@@ -15,10 +15,16 @@ class Chatroom {
       message,
       username: this.username,
       room: this.room,
-      created_at: firebase.firestore.Timestamp.fromDate
+      created_at: firebase.firestore.Timestamp.fromDate(now)
     };
     //save chat 
     const response = await this.chats.add(chat);
     return response;
   }
 }
+
+const chatroom = new Chatroom('general', 'mario');
+
+chatroom.addChat('Hello world!')
+  .then(() => console.log('success, chat added'))
+  .catch(err => console.log(err));
